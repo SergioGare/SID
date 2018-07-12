@@ -1,12 +1,12 @@
-function Inverse(number) {
+function Inverse(number, base) {
 
     caracteres = new Array(1);
 
     for(var i=0 ; i<2 ; i++){
 
-        if(number%128){
-            caracteres[i] = (number%128);
-            number-=((caracteres[i]*128));
+        if(number%base){
+            caracteres[i] = (number%base);
+            number-=((caracteres[i]*base));
         }else {
             caracteres[i] = number;
         }
@@ -16,5 +16,3 @@ function Inverse(number) {
     console.log(caracteres);
 
 }
-
-Inverse(255);
