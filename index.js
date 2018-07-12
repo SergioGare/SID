@@ -1,8 +1,14 @@
 // Created by Sergio Gare at 11/07/2018.
 
+const to256 = require('./inverse');
 const toDecimal = require('./toDecimal');
 
-const stdin = process.openStdin();
+console.log(toDecimal('222', 128));
+console.log(String.fromCharCode(50));
+
+to256(6450);
+
+/*const stdin = process.openStdin();
 
 stdin.addListener('data', (data) => {
 
@@ -10,4 +16,4 @@ stdin.addListener('data', (data) => {
 
     console.log(toDecimal(digits));
 
-});
+});*/

@@ -2,7 +2,7 @@
 
 const math = require('./math');
 
-module.exports = (digits) => {
+module.exports = (digits, base) => {
 
     let result = 0;
     let exponent = result;
@@ -10,7 +10,7 @@ module.exports = (digits) => {
 
     for (let i = length; i >= 0; i--) {
 
-        result += digits.charCodeAt(i) * math.pow(128, exponent);
+        result += digits.charCodeAt(i) * math.pow(base, exponent);
         exponent++;
 
     }

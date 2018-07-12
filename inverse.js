@@ -1,18 +1,27 @@
+
 function Inverse(number, base) {
 
-    caracteres = new Array(1);
+    let caracteres = [];
 
-    for(var i=0 ; i<2 ; i++){
+    while (true) {
 
-        if(number%base){
-            caracteres[i] = (number%base);
-            number-=((caracteres[i]*base));
-        }else {
-            caracteres[i] = number;
+        if((number / base) | 0) {
+
+            caracteres.push(String.fromCharCode(number % base));
+            number = (number / base) | 0;
+
+        } else {
+
+            caracteres.push(String.fromCharCode(number % base));
+            break;
+
         }
 
     }
 
-    console.log(caracteres);
+    console.log(caracteres.join(''));
+
 
 }
+
+Inverse(825650, 128);
