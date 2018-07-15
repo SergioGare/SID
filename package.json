@@ -1,0 +1,19 @@
+{
+  "name": "sid",
+  "version": "0.1.0",
+  "description": "SID es un algoritmo de compresión sencillo basado en altas bases numericas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Sergio_Gare@bitbucket.org/paper_team/sid.git"
+  },
+  "author": "Sergio Gare",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/paper_team/sid#readme",
+  "dependencies": {
+    "js-sha3": "^0.7.0"
+  }
+}
