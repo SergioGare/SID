@@ -1,10 +1,13 @@
 // Created by Sergio Gare at 14/07/2018.
 
+const to10 = require('./bin/to10/to10');
+const to16 = require('./bin/to16/to16');
+
 class Sid {
 
     constructor (data) {
 
-        this.data = data;
+        this.data = data.toString();
         this.compressed = '';
         this.decompressed = this.compressed;
 
@@ -12,15 +15,7 @@ class Sid {
 
     compress10 () {
 
-        let final = [];
-        this.data = this.data.toString();
-        let len = this.data.length;
-
-        for (let i = 0; i < len; i += 4)
-
-            final.push(String.fromCharCode(parseInt(this.data.substr(i, 4))));
-
-        this.compressed = final.join('');
+        this.compressed = to10.compress(this.data);
 
         return this.compressed;
 
@@ -28,13 +23,7 @@ class Sid {
 
     decompress10 () {
 
-        let final = [];
-
-        for (let i = this.compressed.length - 1; i >= 0; i--)
-
-            final.unshift(this.compressed.charCodeAt(i));
-
-        this.decompressed = final.join('');
+        this.decompressed = to10.decompress(this.compressed);
 
         return this.decompressed;
 
@@ -42,15 +31,7 @@ class Sid {
 
     compress16 () {
 
-        // De base 16 a 65536.
-
-        let final = [];
-
-        for (let i = 0; i < 64; i+=4)
-
-            final.push(String.fromCharCode(parseInt(this.data.substr(i, 4), 16)));
-
-        this.compressed = final.join('');
+        this.compressed = to16.compress(this.data);
 
         return this.compressed;
 
@@ -58,15 +39,7 @@ class Sid {
 
     decompress16 () {
 
-        // De base 65536 a 16.
-
-        let final = [];
-
-        for (let i = this.compressed.length - 1; i >= 0; i--)
-
-            final.unshift(this.compressed.charCodeAt(i).toString(16).padStart(4, '0'));
-
-        this.decompressed = final.join('');
+        this.decompressed = to16.decompress(this.compressed);
 
         return this.decompressed;
 
@@ -76,7 +49,7 @@ class Sid {
 
 module.exports = Sid;
 
-let crunch = new Sid(1111199999);
+let crunch = new Sid(11110009);
 crunch.compress10();
 crunch.decompress10();
 
