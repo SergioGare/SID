@@ -13,7 +13,5 @@
   "author": "Sergio Gare",
   "license": "ISC",
   "homepage": "https://bitbucket.org/paper_team/sid#readme",
-  "dependencies": {
-    "js-sha3": "^0.7.0"
-  }
+  "dependencies": {}
 }
