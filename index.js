@@ -1,7 +1,10 @@
 // Created by Sergio Gare at 14/07/2018.
 
+const sizeof = require('sizeof');
+
 const to10 = require('./bin/to10/to10');
 const to16 = require('./bin/to16/to16');
+const to128 = require('./bin/to128/to128');
 
 class Sid {
 
@@ -45,12 +48,22 @@ class Sid {
 
     }
 
+    compress128 () {
+
+        this.compressed = to128.compress(this.data);
+
+        return this.compressed;
+
+    }
+
+    decompress128 () {
+
+        this.decompressed = to128.decompress(this.compressed);
+
+        return this.decompressed;
+
+    }
+
 }
 
 module.exports = Sid;
-
-let crunch = new Sid(11110009);
-crunch.compress10();
-crunch.decompress10();
-
-console.log(crunch.decompressed);
