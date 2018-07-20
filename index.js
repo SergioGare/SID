@@ -1,10 +1,8 @@
 // Created by Sergio Gare at 14/07/2018.
 
-const sizeof = require('sizeof');
-
-const to10 = require('./bin/to10/to10');
-const to16 = require('./bin/to16/to16');
-const to128 = require('./bin/to128/to128');
+const to10 = require('./lib/to10/to10');
+const to16 = require('./lib/to16/to16');
+const to128 = require('./lib/to128/to128');
 
 class Sid {
 
