@@ -2,9 +2,9 @@
 
 // De base 65536 a 16.
 
-module.exports = decompressor;
+module.exports = decompres;
 
-function decompressor (numberString) {
+function decompres (numberString) {
 
     let final = [];
 

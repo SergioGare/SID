@@ -2,9 +2,9 @@
 
 // De base 16 a 65536.
 
-module.exports = compressor;
+module.exports = compress;
 
-function compressor (numberString) {
+function compress (numberString) {
 
     let final = [];
     let len = numberString.length;
