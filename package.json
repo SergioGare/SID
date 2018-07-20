@@ -1,0 +1,13 @@
+{
+  "name": "sid",
+  "version": "1.0.0",
+  "description": "Simple compression by means of high numerical bases.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SergioGare/SID.git"
+  },
+  "author": "Sergio Gare <sergio.gare.sagg@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {}
+}

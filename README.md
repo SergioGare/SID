@@ -1,3 +1,3 @@
-# SID
+# Sid
 
-SID es un algoritmo de compresión sencillo basado en altas bases numericas.
+Sid es un algoritmo de compresión sencillo basado en altas bases numericas.
