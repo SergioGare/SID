@@ -1,5 +1,5 @@
 {
-  "name": "sid",
+  "name": "sid.js",
   "version": "1.0.0",
   "description": "Simple compression by means of high numerical bases.",
   "main": "index.js",
@@ -9,5 +9,6 @@
   },
   "author": "Sergio Gare <sergio.gare.sagg@gmail.com>",
   "license": "GPL-3.0-or-later",
+  "keywords": ["base", "128", "16", "10", "compression"],
   "dependencies": {}
 }
