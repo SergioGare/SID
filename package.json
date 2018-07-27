@@ -1,6 +1,6 @@
 {
   "name": "sid.js",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Simple compression by means of high numerical bases.",
   "main": "index.js",
   "repository": {
