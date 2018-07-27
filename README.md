@@ -11,11 +11,30 @@ Simple compression by means of high numerical bases.
 Import the module:
 
     const Sid = require('sid.js');
+    
+Example:
+
+```
+let crunch = new Sid ();
+
+crunch.compress16('ffff'); // Output: ㍦㍦
+
+crunch.decompress16('㍦㍦'); // Output: ffff
+
+// Other way...
+
+let crunch = new Sid('ffff');
+
+crunch.compress16(); // Output: ㍦㍦
+
+crunch.decompress16(); // Output: ffff
+
+```
 
 Methods:
 
 + constructor.
-    * Receive a number or a string.
+    * Receive a number or a string (optional).
     
 ```
 let crunch = new Sid(data);
