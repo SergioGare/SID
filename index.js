@@ -8,55 +8,55 @@ class Sid {
 
     constructor (data) {
 
-        this.data = data.toString();
+        this.data = data ? data.toString() : null;
         this.compressed = '';
         this.decompressed = this.compressed;
 
     }
 
-    compress10 () {
+    compress10 (data) {
 
-        this.compressed = to10.compress(this.data);
+        this.compressed = to10.compress(data ? data : this.data);
 
         return this.compressed;
 
     }
 
-    decompress10 () {
+    decompress10 (data) {
 
-        this.decompressed = to10.decompress(this.compressed);
+        this.decompressed = to10.decompress(data ? data : this.compressed);
 
         return this.decompressed;
 
     }
 
-    compress16 () {
+    compress16 (data) {
 
-        this.compressed = to16.compress(this.data);
+        this.compressed = to16.compress(data ? data : this.data);
 
         return this.compressed;
 
     }
 
-    decompress16 () {
+    decompress16 (data) {
 
-        this.decompressed = to16.decompress(this.compressed);
+        this.decompressed = to16.decompress(data ? data : this.compressed);
 
         return this.decompressed;
 
     }
 
-    compress128 () {
+    compress128 (data) {
 
-        this.compressed = to128.compress(this.data);
+        this.compressed = to128.compress(data ? data : this.data);
 
         return this.compressed;
 
     }
 
-    decompress128 () {
+    decompress128 (data) {
 
-        this.decompressed = to128.decompress(this.compressed);
+        this.decompressed = to128.decompress(data ? data : this.compressed);
 
         return this.decompressed;
 
